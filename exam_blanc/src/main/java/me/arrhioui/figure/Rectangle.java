@@ -2,7 +2,9 @@ package me.arrhioui.figure;
 
 import me.arrhioui.observer.ParametrageObservable;
 
-public class Rectangle extends Figure{
+import java.io.Serializable;
+
+public class Rectangle extends Figure implements Serializable {
     private Point coin;
     private float h;
     private float l;

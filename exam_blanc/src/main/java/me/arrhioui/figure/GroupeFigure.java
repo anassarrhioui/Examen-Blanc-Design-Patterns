@@ -1,9 +1,10 @@
 package me.arrhioui.figure;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GroupeFigure extends Figure{
+public class GroupeFigure extends Figure implements Serializable {
 
     private List<Figure> childFigures = new ArrayList<>();
 

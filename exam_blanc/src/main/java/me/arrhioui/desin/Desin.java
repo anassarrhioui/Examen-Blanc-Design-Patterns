@@ -4,10 +4,11 @@ import me.arrhioui.desin.traiter.Itraiter;
 import me.arrhioui.desin.traiter.TraiterImpl1;
 import me.arrhioui.figure.Figure;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Desin {
+public class Desin implements Serializable {
 
     private List<Figure> figures = new ArrayList<>();
 
@@ -32,5 +33,13 @@ public class Desin {
 
     public void removeFigure(Figure figure){
         this.figures.remove(figure);
+    }
+
+    public void serialiser(String filePath) throws IOException {
+        try(FileOutputStream fileOutputStream = new FileOutputStream(filePath)) {
+            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);){
+                objectOutputStream.writeObject(this.figures);
+            }
+        }
     }
 }

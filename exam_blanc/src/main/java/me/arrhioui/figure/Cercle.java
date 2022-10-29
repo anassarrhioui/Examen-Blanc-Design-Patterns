@@ -2,7 +2,9 @@ package me.arrhioui.figure;
 
 import me.arrhioui.observer.ParametrageObservable;
 
-public class Cercle extends Figure{
+import java.io.Serializable;
+
+public class Cercle extends Figure implements Serializable {
     private Point c;
     private float r;
 

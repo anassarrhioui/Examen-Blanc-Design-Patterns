@@ -7,11 +7,13 @@ import me.arrhioui.desin.traiter.TraiterImpl2;
 import me.arrhioui.figure.*;
 import me.arrhioui.observer.ParametrageObservable;
 
+import java.io.IOException;
+
 public class Main {
 
     public static Itraiter algo1 = new TraiterImpl1();
     public static Itraiter algo2 = new TraiterImpl2();
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ParametrageObservable parametrage = new ParametrageObservable();
         Desin desin = new Desin();
 
@@ -54,5 +56,7 @@ public class Main {
 
         cercle.afficher();
         rectangle.afficher();
+
+        desin.serialiser("ser.dat");
     }
 }

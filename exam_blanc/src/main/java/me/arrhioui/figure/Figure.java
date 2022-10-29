@@ -2,7 +2,9 @@ package me.arrhioui.figure;
 
 import me.arrhioui.observer.ParametrageObservable;
 
-public abstract class Figure {
+import java.io.Serializable;
+
+public abstract class Figure implements Serializable {
 
     protected String couleurConteur = "Noir";
     protected String coulleurRemplissage = "Blanc";
